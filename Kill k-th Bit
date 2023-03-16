@@ -1,0 +1,15 @@
+def KillBit(n, k):
+    n_bin = bin(n)
+    n_bin = n_bin[2::]
+    str_n_bin = list(n_bin)
+    res = ""
+
+    for i in range(len(str_n_bin)):
+        if i == k:
+            str_n_bin[i] = 0
+    for j in str_n_bin:
+        res += str(j)
+    return int(res, 2)
+
+
+print(KillBit(37, 4))
