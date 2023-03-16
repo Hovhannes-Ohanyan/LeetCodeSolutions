@@ -1,0 +1,10 @@
+def PivotIndex(lst:list):
+    all_el_sum=sum(lst)
+    left_sum=0
+    for i in range(len(lst)):
+        right_sum=all_el_sum-lst[i]-left_sum
+        if right_sum==left_sum:
+            return i
+        left_sum+=lst[i]
+    return -1
+print(PivotIndex([1,7,3,6,5,6]))
