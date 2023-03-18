@@ -1,0 +1,8 @@
+def isPalindrome(self, s):
+        res=""
+        for i in s:
+            if i.isalpha():
+                res+=i
+        if res.upper()==res.upper()[::-1]:
+            return True
+        return False
