@@ -1,0 +1,12 @@
+   def deleteDuplicates(self, head):
+        if head == None:
+            return head
+        tmp = head
+        while tmp.next != None:
+            if tmp.val == tmp.next.val:
+                tmp.next = tmp.next.next
+            else:    
+                tmp = tmp.next
+        return head
+#time complexity O(n) 
+#space complexity O(1)
