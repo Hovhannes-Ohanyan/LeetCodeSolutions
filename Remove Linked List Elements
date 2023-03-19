@@ -1,0 +1,21 @@
+def removeElements(self, head, val):
+        
+        if head is None:
+            return head
+        
+        while head.val == val:
+            head = head.next
+            if head is None:
+                return head
+
+        tmp = head
+        while tmp.next!=None:
+            if tmp.next.val == val:
+                tmp.next = tmp.next.next
+            else:
+                tmp = tmp.next
+
+        return head
+        
+#time complexity O(n)
+#space complexity O(1)
